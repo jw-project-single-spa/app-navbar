@@ -6,6 +6,7 @@
     "build": "concurrently npm:build:*",
     "build:webpack": "webpack --mode=production",
     "analyze": "webpack --mode=production --env analyze",
+    "publish-mfe": "lib-publish-mfe --fileName app-navbar.js --fileAddress dist/jw-project-app-navbar.js --mfeName app-navbar",
     "lint": "eslint src --ext js,ts,tsx",
     "format": "prettier --write .",
     "check-format": "prettier --check .",
@@ -50,6 +51,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
+    "@jw-project/lib-publish-mfe": "^1.0.0",
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.9.3",
     "@types/jest": "^27.0.1",
