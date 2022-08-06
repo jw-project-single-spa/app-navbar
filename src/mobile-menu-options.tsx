@@ -1,10 +1,9 @@
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import IconButton from "@mui/material/IconButton";
-import Badge from "@mui/material/Badge";
-import AccountCircle from "@mui/icons-material/AccountCircle";
-import MailIcon from "@mui/icons-material/Mail";
-import NotificationsIcon from "@mui/icons-material/Notifications";
+import { Menu, MenuItem, IconButton, Badge } from "@mui/material";
+import {
+  AccountCircle,
+  Mail as MailIcon,
+  Notifications as NotificationsIcon,
+} from "@mui/icons-material";
 import React, { useContext } from "react";
 import { ControlContext } from "./control-context";
 

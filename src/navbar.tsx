@@ -1,14 +1,18 @@
-import Box from "@mui/material/Box";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import Badge from "@mui/material/Badge";
-import MenuIcon from "@mui/icons-material/Menu";
-import MailIcon from "@mui/icons-material/Mail";
-import NotificationsIcon from "@mui/icons-material/Notifications";
-import AccountCircle from "@mui/icons-material/AccountCircle";
-import MoreIcon from "@mui/icons-material/MoreVert";
+import {
+  Box,
+  AppBar,
+  Toolbar,
+  IconButton,
+  Typography,
+  Badge,
+} from "@mui/material";
+import {
+  Menu as MenuIcon,
+  Mail as MailIcon,
+  Notifications as NotificationsIcon,
+  AccountCircle,
+  MoreVert as MoreIcon,
+} from "@mui/icons-material";
 import { MobileMenuOptions } from "./mobile-menu-options";
 import { MenuOptions } from "./menu-options";
 import { useContext } from "react";
