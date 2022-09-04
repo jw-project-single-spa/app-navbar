@@ -6,7 +6,7 @@
     "build": "concurrently npm:build:*",
     "build:webpack": "webpack --mode=production",
     "analyze": "webpack --mode=production --env analyze",
-    "publish-mfe": "lib-publish-mfe --fileName app-navbar.js --mfeName app-navbar",
+    "publish-mfe": "lib-publish-mfe --fileName jw-project-app-navbar.js --mfeName app-navbar",
     "lint": "eslint src --ext js,ts,tsx",
     "format": "prettier --write .",
     "check-format": "prettier --check .",
