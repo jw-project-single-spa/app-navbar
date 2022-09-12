@@ -2,7 +2,9 @@ import React, { MouseEvent, useMemo, useState } from "react";
 import { ControlContext } from "./control-context";
 import { Navbar } from "./navbar";
 
-export default function Root() {
+export default function Root(props) {
+  const { themeObservable, titleObservable } = props;
+
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] =
     useState<null | HTMLElement>(null);
@@ -45,6 +47,9 @@ export default function Root() {
       handleMobileMenuClose,
       handleMenuClose,
       handleMobileMenuOpen,
+
+      themeObservable,
+      titleObservable,
     }),
     [
       anchorEl,
@@ -58,6 +63,9 @@ export default function Root() {
       handleMobileMenuClose,
       handleMenuClose,
       handleMobileMenuOpen,
+
+      themeObservable,
+      titleObservable,
     ]
   );
 

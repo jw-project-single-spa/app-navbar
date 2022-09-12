@@ -15,12 +15,30 @@ import {
 } from "@mui/icons-material";
 import { MobileMenuOptions } from "./mobile-menu-options";
 import { MenuOptions } from "./menu-options";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ControlContext } from "./control-context";
 
 export function Navbar() {
-  const { menuId, mobileMenuId, handleProfileMenuOpen, handleMobileMenuOpen } =
-    useContext(ControlContext);
+  const [title, setTitle] = useState("");
+
+  const {
+    menuId,
+    mobileMenuId,
+    handleProfileMenuOpen,
+    handleMobileMenuOpen,
+    titleObservable,
+    themeObservable,
+  } = useContext(ControlContext);
+
+  const onClickEmail = () => {
+    themeObservable.next("escuro");
+  };
+
+  useEffect(() => {
+    titleObservable.subscribe((v) => {
+      setTitle(v);
+    });
+  }, []);
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -41,7 +59,7 @@ export function Navbar() {
             component="div"
             sx={{ display: { xs: "none", sm: "block" } }}
           >
-            MUI
+            {title}
           </Typography>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
@@ -49,6 +67,7 @@ export function Navbar() {
               size="large"
               aria-label="show 4 new mails"
               color="inherit"
+              onClick={onClickEmail}
             >
               <Badge badgeContent={4} color="error">
                 <MailIcon />

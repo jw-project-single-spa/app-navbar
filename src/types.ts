@@ -1,4 +1,5 @@
 import { MouseEvent } from "react";
+import { BehaviorSubject } from "rxjs";
 
 export type ControlContextType = {
   anchorEl: HTMLElement;
@@ -14,4 +15,7 @@ export type ControlContextType = {
   handleMobileMenuClose: () => void;
   handleMenuClose: () => void;
   handleMobileMenuOpen: (event: MouseEvent<HTMLElement>) => void;
+
+  themeObservable: BehaviorSubject<string>;
+  titleObservable: BehaviorSubject<string>;
 };
